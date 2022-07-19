@@ -238,7 +238,7 @@ class Spotify_iOS:
         ac.tap(None, 350, 66, 1).perform()
         self.logger.debug('Open Spotify Picker for changing the device volume')
         time.sleep(5)
-        args = {"duration": 0.2, "fromX": 53, "fromY": 755, "toX": 202, "toY": 593}
+        args = {"duration": 0.2, "fromX": 53, "fromY": 755, "toX": 202, "toY": 593} #X and Y coordinates are constant
         self.driver.execute_script("mobile: dragFromToForDuration", args)
         self.logger.info('Changed volume to 50')
         time.sleep(2)
@@ -275,7 +275,7 @@ if __name__ == '__main__':
     Sp_app.test_pause_song()
     Sp_app.test_next_song()
     Sp_app.change_slide_song_progress()
-    # Sp_app.test_disconnect_device()
+    Sp_app.test_disconnect_device()
 
 
 
